@@ -3,6 +3,7 @@ package com.thoughtworks;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 public class Student {
 
@@ -44,5 +45,13 @@ public class Student {
 
     public void setAdmissionDate(String admissionDate) {
         this.admissionDate = admissionDate;
+    }
+
+    public String getStudyAge() {
+        String startYear = admissionDate.substring(0, 4);
+        Date now = new Date();
+        SimpleDateFormat currentYear = new SimpleDateFormat("YYYY");
+        int studyAge = Integer.parseInt(currentYear.format(now)) - Integer.parseInt(startYear);
+        return studyAge + "年";
     }
 }

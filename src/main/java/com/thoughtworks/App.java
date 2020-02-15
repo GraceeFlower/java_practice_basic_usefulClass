@@ -14,7 +14,9 @@ public class App {
         for (Student stu: stuList) {
             System.out.println("我叫" + stu.getName()
                 + "，我的学号是" + stu.getStudentId() + "，"
-                + stu.getAdmissionDate() + "入学");
+                + stu.getAdmissionDate() + "入学" + "，学龄"
+                + stu.getStudyAge());
         }
-  }
+
+    }
 }
