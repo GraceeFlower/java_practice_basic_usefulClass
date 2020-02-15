@@ -27,8 +27,8 @@ public class Student {
         this.name = name;
     }
 
-    public int getStudentId() {
-        return studentId;
+    public String getStudentId() {
+        return "00" + studentId;
     }
 
     public void setStudentId(int studentId) {
@@ -38,7 +38,7 @@ public class Student {
     public String getAdmissionDate() throws ParseException {
         SimpleDateFormat rowFormat = new SimpleDateFormat("yyyy.MM.dd");
         Date rowDate = rowFormat.parse(admissionDate);
-        SimpleDateFormat newFormat = new SimpleDateFormat("yyyy年MM月dd日");
+        SimpleDateFormat newFormat = new SimpleDateFormat("yyyy年M月dd日");
         return newFormat.format(rowDate);
     }
 
