@@ -3,7 +3,6 @@ package com.thoughtworks;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Map;
 
 public class Student {
 
@@ -24,16 +23,8 @@ public class Student {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getStudentId() {
         return "00" + studentId;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
     }
 
     public String getAdmissionDate() throws ParseException {
@@ -41,10 +32,6 @@ public class Student {
         Date rowDate = rowFormat.parse(admissionDate);
         SimpleDateFormat newFormat = new SimpleDateFormat("yyyy年M月dd日");
         return newFormat.format(rowDate);
-    }
-
-    public void setAdmissionDate(String admissionDate) {
-        this.admissionDate = admissionDate;
     }
 
     public String getStudyAge() {
