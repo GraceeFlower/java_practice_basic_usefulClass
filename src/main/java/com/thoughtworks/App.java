@@ -12,10 +12,7 @@ public class App {
         stuList.add(new Student("王五", 1, "2019.02.09"));
 
         for (Student stu: stuList) {
-            System.out.println("我叫" + stu.getName()
-                + "，我的学号是" + stu.getStudentId() + "，"
-                + stu.getAdmissionDate() + "入学" + "，学龄"
-                + stu.getStudyAge());
+            System.out.println(stu.toString());
         }
 
         Teacher teacher = new Teacher("张龙", stuList);

@@ -41,4 +41,12 @@ public class Student {
         int studyAge = Integer.parseInt(currentYear.format(now)) - Integer.parseInt(startYear);
         return studyAge + "年";
     }
+
+    @Override
+    public String toString() {
+        return "我是" + name
+            + "，我的学号是" + studentId + "，"
+            + admissionDate + "入学" + "，学龄"
+            + getStudyAge();
+    }
 }

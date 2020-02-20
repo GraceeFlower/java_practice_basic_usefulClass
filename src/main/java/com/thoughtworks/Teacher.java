@@ -2,6 +2,7 @@ package com.thoughtworks;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class Teacher {
@@ -43,10 +44,7 @@ public class Teacher {
         }
         for (Student i: stuList) {
             if (idSet.contains(i.getStudentId())) {
-                System.out.println("姓名：" + i.getName() + "，"
-                    + "学号：" + i.getStudentId() + "，"
-                    + "入学时间：" + i.getAdmissionDate() + "，"
-                    + "学龄：" + i.getStudyAge());
+                System.out.println(i.toString());
             }
         }
     }
