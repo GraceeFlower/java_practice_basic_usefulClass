@@ -32,19 +32,32 @@ public class Teacher {
 
     public void checkRepeat() throws ParseException {
         System.out.println("\n" + this.name + "老师的重复学生信息：");
-        ArrayList<String> idList = new ArrayList<>();
-        for (Student stu: stuList) {
-            idList.add(stu.getStudentId());
-        }
-        HashSet<String> idSet = new HashSet<>();
-        for (int i = 0; i < idList.size(); i++) {
-            if (i != idList.indexOf(idList.get(i))) {
-                idSet.add(idList.get(i));
+//        ArrayList<String> idList = new ArrayList<>();
+//        for (Student stu: stuList) {
+//            idList.add(stu.getStudentId());
+//        }
+//        HashSet<String> idSet = new HashSet<>();
+//        for (int i = 0; i < idList.size(); i++) {
+//            if (i != idList.indexOf(idList.get(i))) {
+//                idSet.add(idList.get(i));
+//            }
+//        }
+//        for (Student i: stuList) {
+//            if (idSet.contains(i.getStudentId())) {
+//                System.out.println(i.toString());
+//            }
+//        }
+        boolean isRepeat;
+        for (int i = 0; i < stuList.size(); i++) {
+            isRepeat = false;
+            for (int j = i + 1; j < stuList.size(); j++) {
+                if (stuList.get(i).equals(stuList.get(j))) {
+                    isRepeat = true;
+                    System.out.println(stuList.get(j).toString());
+                }
             }
-        }
-        for (Student i: stuList) {
-            if (idSet.contains(i.getStudentId())) {
-                System.out.println(i.toString());
+            if (isRepeat) {
+                System.out.println(stuList.get(i).toString());
             }
         }
     }
