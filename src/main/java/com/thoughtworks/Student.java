@@ -3,6 +3,7 @@ package com.thoughtworks;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class Student {
 
@@ -45,8 +46,21 @@ public class Student {
     @Override
     public String toString() {
         return "我是" + name
-            + "，我的学号是" + studentId + "，"
+            + "，我的学号是00" + studentId + "，"
             + admissionDate + "入学" + "，学龄"
             + getStudyAge();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId == student.studentId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(studentId);
     }
 }

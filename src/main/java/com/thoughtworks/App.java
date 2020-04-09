@@ -11,9 +11,7 @@ public class App {
         stuList.add(new Student("李四", 2, "2019.02.10"));
         stuList.add(new Student("王五", 1, "2019.02.09"));
 
-        for (Student stu: stuList) {
-            System.out.println(stu.toString());
-        }
+        stuList.forEach(System.out::println);
 
         Teacher teacher = new Teacher("张龙", stuList);
         teacher.checkRepeat();
